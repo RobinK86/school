@@ -1,0 +1,1616 @@
+/*
+Student Name: Robin Kelley
+File Name: styles.css
+Date: 11/24/2023
+*/
+
+/*-----List of Fonts Used------
+font-family: 'Dosis', sans-serif;
+font-family: 'Ephesis', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Shadows Into Light', cursive;
+*/
+
+/*-----List of Colors Used------
+background-color: #0e0e0e;
+color: #7041e7;
+background-color: #c297f0;
+background-color: #231f29;
+*/
+
+/*-----Gradient Text------------
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+*/
+
+
+/*CSS Reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/******Style Rules for All Viewports******/
+
+/*General Style Rules for Navagation Bar (All Pages)*/
+.navbar {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    font-family: 'Shadows Into Light', cursive;
+    height: 100%;
+    overflow: auto;
+}
+
+.navbar ul {
+    text-align: center;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    position: relative;
+    display: block;
+}
+
+.navbar ul li a {
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.navbar ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin-bottom: -2px;
+    background: linear-gradient(to right, #bd3ba7, #7041e7);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left; 
+}
+
+.logo {
+    display: block;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 5px;
+    font-size: 45px;
+    font-family: 'Ephesis', cursive;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(151, 90, 184)
+}
+
+/*General Rules for Body (All Pages)*/
+body {
+    background-color: #231f29;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main img {
+    border-radius: 10%;
+}
+
+/*General Style Rules for footer (All Pages)*/
+.footer {
+    background-color: #0e0e0e;
+    padding-bottom: 0;
+    margin-left: 20%;
+    overflow: auto;
+    margin-top: auto;
+}
+
+.footer_menu {
+    min-height: 8vh;
+    background-color: #0e0e0e;
+    font-family:'Shadows Into Light', cursive;
+    text-align: center;
+}
+
+.footer_menu li {
+    list-style: none;
+    position: relative;
+    display: inline;
+    margin: 0 2%;
+}
+
+.footer_menu li a {
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+.footer_menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    margin-bottom: -2px;
+    background: linear-gradient(to right, #bd3ba7, #7041e7);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+}
+
+.footer_menu li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left; 
+}
+
+.social {
+    text-align: center;
+}
+
+.social img {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    margin:0 2%;
+    color:inherit;
+    opacity:0.75;
+}
+
+.copyright {
+    position:relative;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*General Classes to disable mobile/desktop only content (All Pages)*/
+.mobile {
+    display: none;
+}
+
+/*Style Rules for Timeline Page(All Pages)*/
+.heading {
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    letter-spacing: 3px;
+    padding-bottom: 50px;
+}
+
+.timeline-section{
+    background-color: #231f29;
+    min-height: 100vh;
+    padding: 100px 15px;
+}
+
+.timeline-items{
+    max-width: 1000px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    left: calc(50% - 1px);
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-dot{
+    height: 16px;
+    width: 16px;
+    background-color: #b066db;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top:10px;
+}
+
+.timeline-date{
+    font-family: 'Ephesis', cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: #704dc9;
+    margin:6px 0 15px;
+}
+
+.timeline-content{
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.timeline-content h3{
+    font-family: 'Ephesis', cursive;
+    font-size: 35px;
+    color: #000000;
+    margin:0 0 10px;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-align: justify;
+}
+
+.timeline-content p{
+    font-family: 'Shadows Into Light', cursive;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 22px;
+    text-align: justify;
+}
+
+/*Style Rules for Contact Page*/
+#section-wrapper{
+    width: 100%;
+    padding: 10px;
+}
+
+.box-wrapper{
+    position: relative;
+    display: table;
+    width:1100px;
+    margin:auto;
+    margin-top:35px;
+    border-radius: 30px;
+}
+
+.info-wrap{
+    width:35%;
+    height: 551px;
+    padding: 40px;
+    float: left;
+    display: block;
+    border-radius: 30px 0px 0px 30px;
+    background-color: #0e0e0e;
+}
+
+.info-title{
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.info-sub-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 17px;
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.info-details {
+    list-style: none;
+    margin: 60px 0px;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.info-details li {
+    margin-top: 25px;
+    font-size: 26px;
+}
+
+.info-details li i {
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.info-details li a {
+    text-decoration: none;
+}
+
+.info-details li a:hover {
+    background: #b066db;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.social-icons {
+    list-style: none;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.social-icons li {
+    list-style: none;
+    display: inline-block;
+    padding-top: 12%;
+
+}
+
+.social-icons li a {
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.form-wrap{
+    width:65%;
+    float: right;
+    padding:40px 25px 25px 25px;
+    border-radius: 0px 30px 30px 0px;
+    background: linear-gradient(326deg, #682797 10%, rgb(183, 88, 235) 35%, #50228d 100% );
+}
+
+.form-title{
+    text-align: left;
+    margin-left: 23px;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.form-fields{
+    display: table;
+    width: 100%;
+    padding: 15px 5px 5px 5px;
+}
+
+.form-fields input,
+.form-fields textarea{
+    border: none;
+    outline:none;
+    background: none;
+    font-size: 18px;
+    color:#000000;
+    padding: 20px 10px 20px 5px;
+    width:100%
+}
+
+.form-fields textarea{
+    height: 150px;
+    resize: none;
+}
+
+.form-group{
+    width: 46%;
+    float: left;
+    padding: 0px 30px;
+    margin: 14px 12px;
+    border-radius: 25px;
+    box-shadow: inset 8px 8px 8px #656668, inset -8px -8px 8px #646161;
+}
+
+.form-fields .form-group:last-child {
+    width: 96%;
+}
+
+.submit-button{
+    width: 96%;
+    height: 60px;
+    margin: 0px 12px;
+    border-radius: 30px;
+    font-size: 20px;;
+    font-weight: 700;
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color:#000000;
+    text-align: center;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(170, 55, 233) 35%, #af80eb 100% );
+    box-shadow: 3px 3px 8px #413f3f, -3px -3px 8px #7a7878;
+    transition: .5s;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.submit-button:hover{
+    background: #72279d;
+}
+
+::placeholder {
+    color: #000000;
+}
+
+/*Style Rules for About Me Page*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 22%;
+    justify-content: center;
+}
+
+.container h2 {
+    text-align: center;
+    margin-top: 15px;
+    width: 75%;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container h3 {
+    text-align: center;
+    margin-top: 15px;
+    width: 75%;
+    background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 35px;
+}
+
+video {
+    margin-top: 2%;
+    width: 75%;
+    margin-bottom: 2%;
+}
+
+/*Style Rules for Resume*/
+.resume_wrapper{
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_left{
+    width: 35%;
+    background: #26252d;
+}
+
+.resume_wrapper .resume_left .resume_image{
+    width: 100%;
+}
+
+.resume_wrapper .resume_left .resume_image img{
+    width: 60%;
+    display: block;
+    margin-left: 10%;
+    border-radius: 0%;
+}
+
+.resume_wrapper .resume_title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.resume_wrapper .resume_left .resume_info{
+    color: #84838b;
+}
+
+.resume_wrapper .resume_left .resume_bottom{
+    padding: 20px 30px;
+}
+
+.resume_wrapper p {
+    font-size: 15px;
+    font-family: 'Dosis', sans-serif;
+    color: #000000;
+}
+
+.resume_wrapper .resume_item{
+    padding: 20px 0;
+    border-bottom: 1px solid #704dc9;
+}
+
+.resume_wrapper  .resume_item:last-child{
+    border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_namerole{
+    display: none;
+}
+
+.resume_wrapper .resume_namerole .name{
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_left .resume_namerole .role{
+    color: #84838b;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_info:last-child{
+     margin-top: 10px;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_subtitle{
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list .skills_bar p{
+    position: relative;
+    width: 100px;
+    height: 20px;
+    background: #fff;
+    margin-top: 0;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list .skills_bar p span{	
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #704dc9;
+    width: 100%;
+    height: 100%;
+}
+
+.resume_wrapper .resume_right{
+    width: 65%;
+    padding: 20px 40px;
+    color: #26252d;
+}
+
+.resume_wrapper .resume_right .resume_namerole .name{
+    color: #26252d;
+    font-size: 32px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_right .resume_namerole .role{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_right .resume_item .resume_title{
+    color: #26252d;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_right .resume_data{
+    display: flex;
+}
+
+.resume_wrapper .resume_right .resume_data .year{
+    padding-right: 35px;
+    width: 115px;
+    position: relative;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_wrapper .resume_right .resume_data .content{
+    padding-left: 35px;
+    width: calc(100% - 115px);
+    margin-bottom: 20px;
+}
+
+.resume_wrapper .resume_right .resume_data .year:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #26252d;
+    border-radius: 50%;
+}
+
+.resume_wrapper .resume_right .resume_data .year:after{
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #704dc9;
+}
+.resume_wrapper .resume_right .resume_data:last-child .year:after{
+    display: none;
+}
+
+.resume_wrapper .resume_right .resmue_interests .resume_info{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.resume_wrapper .resume_right .resmue_interests .interests .int_icon{
+    font-size: 38px;
+    color: #0175b2;
+    margin-bottom: 10px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.resume_interests {
+    display: none;
+}
+
+    
+/******Setting up media query for mobile devices******/
+@media screen and (max-width: 480px) {
+
+    /*Mobile Style Rules for Navagation Bar*/
+    .navbar {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background-color: #000000;
+        width: 100%;
+        height: 75px;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar ul li a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 32%;
+        width: 35%;
+        height: 3px;
+        margin-bottom: -2px;
+        background: linear-gradient(to right, #bd3ba7, #7041e7);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 0px;
+        display: block;
+        background-color: #0e0e0e;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);   
+        z-index: 1;
+    }
+
+    .logo {
+        font-size: 40px;
+        margin-right: 25%;
+        margin-top: 3%;
+    }
+
+    .menu.active {
+        left: 0;
+    } 
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        position: fixed;
+        right: 50px;
+        top: 25px;
+        z-index: 1;
+    }
+
+    .menu li{
+        list-style: none;
+        margin-top: 15%;
+        margin-bottom: 0;
+    }
+
+    .menu li a{
+        color: #7041e7;
+        text-decoration: none;
+        letter-spacing: 3px;
+    }
+
+    .hamburger.scrolling {
+        color:#000000;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        color: rgb(151, 90, 184);
+    }
+
+    /*Mobile Style Rules for Main Index*/
+    .main {
+        padding-top: 75px;
+        margin-left: 8%;
+        max-width: 90%;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .main h1 {
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: bold;       
+    }
+    .main h2 {
+        font-size: 18px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: lighter; 
+    }
+    .main p {
+        font-size: 20px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .main img {
+        max-width: 90%;
+    }
+
+    /*Mobile Style Rules for Footer*/
+    .footer {
+        padding-top: 8%;
+        margin-left: 0;
+    }
+
+    .footer_menu {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .wrapper {
+        padding: 2% 4% 2% 5%;
+    }
+    
+    /*Mobile Style rules for Contact*/
+    .box-wrapper{
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .info-wrap, .form-wrap{
+        width: 100%;
+        height: inherit;
+        float: none;  
+    }
+
+    .info-wrap{
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .form-wrap{
+        border-radius: 0px 0px 30px 30px;
+    }
+
+    .form-group{
+        width: 100%;
+        float: none;
+        margin: 25px 0px;
+    }
+
+    .form-fields .form-group:last-child, .submit-button{
+        width: 100%;
+    }
+
+    .submit-button{
+        margin: 10px 0px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+    
+    /*Mobile Style Rules for About Me*/
+    .container{
+        margin: 75px 0 0 0;
+    }
+
+    .container h2 {
+        font-size: 30px;
+        margin-left: 10%;
+    }
+
+    .container h3 {
+        font-size: 25px;
+        margin-bottom: 10%;
+        margin-left: 10%;
+    }
+
+    video {
+        width: 85%;
+        margin-left: 7%;
+    }
+
+    /*Laptop Style rules for Resume*/
+    .resume_image {
+        max-width: 500px;
+    }
+    .resume_wrapper .resume_right .resume_namerole{
+        display: none;
+    }
+
+    .resume_wrapper .resume_left .resume_namerole{
+        display: block;
+    }
+
+    .resume_wrapper{
+        width: 95%;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .resume_wrapper .resume_left,
+    .resume_wrapper .resume_right{
+        width: 100%;
+    }
+
+    .resume_wrapper .resume_right .resume_data .content{
+        padding-left: 35px;
+        width: calc(100% - 35px);
+        margin-bottom: 20px;
+    }
+}
+
+
+/******Style Rules for Tablet Viewport******/
+@media screen and (min-width: 481px), print {
+
+    /*Tablet Style Rules Nav Bar*/
+    .navbar {
+        background: linear-gradient(to right, #111111, #363538);
+        border-top-right-radius: 80px;
+        width: 25%;   
+    }
+
+    .navbar ul li {
+        padding-top: 20%;
+    }
+
+    .navbar ul li a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 23%;
+        width: 50%;
+        height: 3px;
+        margin-bottom: -2px;
+        background: linear-gradient(to right, #bd3ba7, #7041e7);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .main, .timeline-section {
+        margin-left: 27%;
+    }
+
+    .main h1 {
+        font-size: 30px;
+        font-family: 'Shadows Into Light', cursive;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        letter-spacing: 3px;
+        font-weight: bold;   
+        padding-top: 10%;
+    }
+
+    .main h2 {
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        letter-spacing: 3px;
+        font-weight: lighter; 
+        margin-top: 5%;
+    }
+
+    .main p {
+        position: relative;
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .main img {
+        max-width: 75%;
+    }
+
+    .footer_menu {
+        padding-top: 2%;
+        font-size: 20px;
+        margin-left: 5%;
+    }
+
+    /*Tablet Style Rules for Timeline*/
+    .timeline-item:last-child{
+        margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(odd){
+        padding-right: calc(50% + 30px);
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even){
+        padding-left: calc(50% + 30px);
+    }
+
+    .timeline-content h3{
+        font-family: 'Ephesis', cursive;
+        font-size: 35px;
+        color: #000000;
+        margin:0 0 10px;
+        text-transform: capitalize;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-align: left;
+    }
+
+    .timeline-content p{
+        font-family: 'Shadows Into Light', cursive;
+        color: #000000;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    /*Tablet Style Rules for Contact*/
+    .box-wrapper{
+        width: 70%;
+        margin-left: 28%;
+    }
+
+    .info-wrap, .form-wrap{
+        width: 100%;
+        height: inherit;
+        float: none;  
+    }
+
+    .info-wrap{
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .form-wrap{
+        border-radius: 0px 0px 30px 30px;
+    }
+
+    .form-group{
+        width: 100%;
+        float: none;
+        margin: 25px 0px;
+    }
+
+    .form-fields .form-group:last-child, .submit-button{
+        width: 100%;
+    }
+
+    .submit-button{
+        margin: 10px 0px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+
+    /*Tablet Style Rules for About Me*/
+    .container {
+        margin-left: 32%;
+    }
+
+    .container h2{
+        font-size: 40px;
+        margin-left: 7%;
+    }
+
+    .container h3 {
+        font-size: 35px;
+        margin-left: 7%;
+        margin-bottom: 10%;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    /*Tablet Style rules for Resume*/
+    .resume_image {
+        max-width: 55%;
+    }
+
+    .resume_wrapper .resume_right .resume_namerole{
+        display: none;
+    }
+
+    .resume_wrapper .resume_left .resume_namerole{
+        display: block;
+    }
+
+    .resume_wrapper{
+        width: 70%;
+        margin-left: 27%;
+        flex-direction: column;
+    }
+
+    .resume_wrapper .resume_left,
+    .resume_wrapper .resume_right{
+        width: 100%;
+    }
+}
+
+/******Style Rules for Laptop / Smaller Screens Viewport******/
+@media screen and (min-width: 769px), print{
+
+    /*Laptop Style Rules Nav Bar*/
+    .navbar {
+        width: 25%;
+        background: linear-gradient(to right, #111111, #363538);
+        border-top-right-radius: 80px;
+    }
+
+    .navbar ul li {
+        padding-top: 20%;
+    }  
+
+    .hamburger{
+        display: none;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #7041e7;
+    }
+
+    .main {
+        margin-left: 27%;
+    }
+
+    .main h1 {
+        font-size: 30px;
+        font-family: 'Shadows Into Light', cursive;
+        color: #7041e7;
+        letter-spacing: 3px;
+        font-weight: bold;   
+        padding-top: 10%;
+    }
+
+    .main h2 {
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        color: #7041e7;
+        letter-spacing: 3px;
+        font-weight: lighter; 
+        margin-top: 5%;
+    }
+
+    .main p {
+        position: relative;
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        color: #7041e7;
+        letter-spacing: 3px;
+        font-weight: lighter;
+        margin-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .main img {
+        max-width: 75%;
+    }
+
+    .footer_menu {
+        padding-top: 2%;
+        font-size: 20px;
+
+    }
+
+    .social {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 0;
+    }
+
+    /*Laptop Style rules for Resume*/
+    .resume_image {
+        max-width: 500px;
+    }
+
+    .resume_wrapper .resume_right .resume_namerole{
+		display: none;
+	}
+
+	.resume_wrapper .resume_left .resume_namerole{
+		display: block;
+	}
+
+	.resume_wrapper{
+		width: 70%;
+		margin-left: 27%;
+		flex-direction: column;
+	}
+
+	.resume_wrapper .resume_left,
+	.resume_wrapper .resume_right{
+		width: 100%;
+	}
+}
+
+/******Style Rules for Desktop / Larger Screens Viewport******/
+@media screen and (min-width: 1025px), print{
+
+    /*Style Rules for Nav*/
+    .navbar {
+        background: #0e0e0e;
+        border-top-right-radius: 80px;
+        width: 20%;
+    }
+
+    .navbar ul li {
+        padding-top: 25px;
+    }
+
+    .navbar ul li a{
+        font-size: 35px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    /*Style Rules for Main*/
+    .main {
+
+        display: grid;
+        grid: 50px 300px auto / 35% auto;
+        margin-bottom: -100px;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .grid2 {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+   .grid3 {
+        grid-column-start: 2;
+        grid-row: 1 / span 2;
+    }
+
+    .grid4 {
+        grid-column: 1 / span 2;
+        grid-row-start: 3;
+        margin-top: 10%; 
+    }
+
+    .main h1 {
+        font-size: 35px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: bold;
+        margin-top: 35%;
+    }
+
+    .main h2 {
+        font-size: 30px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: 300;
+        margin-top: 50%;
+    }
+
+    .main p {
+        font-size: 25px;
+        font-family: 'Shadows Into Light', cursive;
+        letter-spacing: 3px;
+        font-weight: 500;
+        max-width: 75%;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .main img {
+        max-width: 60%;
+        margin-top: 10%
+    }
+
+    .push {
+        height: 100px;
+    }
+
+     /*Style Rules for Footer*/
+    .footer_menu {
+        padding-top: 1%;
+        font-size: 20px;
+        text-align: start;
+        margin-left: 20%;
+    }
+
+    .footer_menu a{
+        font-size: 22px;
+    }
+
+    .social {
+        text-align: start;
+        margin-left: 27%;
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .copyright {
+        text-align: start;
+        margin: 0;
+        padding: 20px 0 0 31%;
+    }
+
+    /*Timeline Styles*/
+    .timeline-item:last-child{
+        margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(odd){
+        padding-right: calc(50% + 30px);
+        text-align: right;
+    }
+
+    .timeline-item:nth-child(even){
+        padding-left: calc(50% + 30px);
+    }
+
+    .timeline-section{
+        margin-left: 0;
+    }
+
+    /*Style Rules for Contact Page*/
+    #section-wrapper{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .box-wrapper{
+        position: relative;
+        display: table;
+        width:1100px;
+        margin:auto;
+        margin-top:35px;
+        border-radius: 30px;
+    }
+
+    .info-wrap{
+        width:35%;
+        height: 551px;
+        padding: 40px;
+        float: left;
+        display: block;
+        border-radius: 30px 0px 0px 30px;
+        background-color: #0e0e0e;
+    }
+
+    .info-title{
+        text-align: left;
+        font-size: 35px;
+        letter-spacing: 0.5px;
+        margin-top: 0;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .info-sub-title{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 17px;
+        letter-spacing: 0.5px;
+        line-height: 26px;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-family: 'Shadows Into Light', cursive;
+    }
+
+    .info-details {
+        list-style: none;
+        margin: 60px 0px;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-family: 'Shadows Into Light', cursive;
+    }
+
+    .info-details li {
+        margin-top: 25px;
+        font-size: 26px;
+    }
+
+    .info-details li i {
+        background: linear-gradient(326deg, #9851cb 10%, rgb(151, 90, 184) 35%, #af80eb 100% );
+        padding: 12px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+
+    .info-details li a {
+        text-decoration: none;
+    }
+
+    .info-details li a:hover {
+        background: #b066db;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+
+    .social-icons {
+        display: block;
+        list-style: none;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .social-icons li {
+        list-style: none;
+        display: inline-block;
+        padding-top: 12%;
+    }
+
+    .social-icons li a {
+        cursor: pointer;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    .form-wrap{
+        width:65%;
+        float: right;
+        padding:40px 25px 25px 25px;
+        border-radius: 0px 30px 30px 0px;
+        background: linear-gradient(326deg, #682797 10%, rgb(183, 88, 235) 35%, #50228d 100% );
+    }
+
+    .form-title{
+        text-align: left;
+        margin-left: 23px;
+        font-size: 28px;
+        letter-spacing: 0.5px;
+        margin-top: 0;
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .form-fields{
+        display: table;
+        width: 100%;
+        padding: 15px 5px 5px 5px;
+    }
+
+    .form-fields input,
+    .form-fields textarea{
+        border: none;
+        outline:none;
+        background: none;
+        font-size: 18px;
+        color:#000000;
+        padding: 20px 10px 20px 5px;
+        width:100%
+    }
+
+    .form-fields textarea{
+        height: 150px;
+        resize: none;
+    }
+
+    .form-group{
+        width: 46%;
+        float: left;
+        padding: 0px 30px;
+        margin: 14px 12px;
+        border-radius: 25px;
+        box-shadow: inset 8px 8px 8px #656668, inset -8px -8px 8px #646161;
+    }
+
+    .form-fields .form-group:last-child {
+        width: 96%;
+    }
+
+    .submit-button{
+        width: 96%;
+        height: 60px;
+        margin: 0px 12px;
+        border-radius: 30px;
+        font-size: 20px;;
+        font-weight: 700;
+        outline: none;
+        border:none;
+        cursor: pointer;
+        color:#000000;
+        text-align: center;
+        background: linear-gradient(326deg, #9851cb 10%, rgb(170, 55, 233) 35%, #af80eb 100% );
+        box-shadow: 3px 3px 8px #413f3f, -3px -3px 8px #7a7878;
+        transition: .5s;
+    }
+
+    /*Style Rules for About Me*/
+    .container {
+        margin-left: 25%;
+    }
+
+    .container h2, .container h3 {
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+
+    /*Style rules for Resume*/
+    .resume_image {
+        max-width: 500px;
+    }
+
+    .resume_wrapper .resume_right .resume_namerole{
+        display: block;
+    }
+
+    .resume_wrapper .resume_left .resume_namerole{
+        display: flex;
+    }
+
+    .resume_wrapper{
+        display: flex;
+        flex-direction: initial;
+        width: 800px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 10px;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .resume_wrapper .resume_left{
+        width: 35%;
+    }
+
+    .resume_wrapper .resume_right{
+        width: 65%;
+    }
+
+    .resume_title,
+    .content p {
+        padding-bottom: 2%;
+    }
+}
